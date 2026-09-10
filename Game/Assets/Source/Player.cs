@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
     void Start() {
 
-        speed = 10f;
+        speed = 5f;
 
     }
 
