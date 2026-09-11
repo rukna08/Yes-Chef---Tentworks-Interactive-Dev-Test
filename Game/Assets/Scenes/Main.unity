@@ -2025,6 +2025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8287fd0a06a0c6541ad513f073f4be18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  interact_open_text: {fileID: 572279600}
+  interact_close_text: {fileID: 1790161291}
 --- !u!1 &2115860501
 GameObject:
   m_ObjectHideFlags: 0
