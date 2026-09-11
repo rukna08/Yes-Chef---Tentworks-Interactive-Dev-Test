@@ -5,6 +5,7 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
 
     public TMP_Text interact_open_text;
     public TMP_Text interact_close_text;
+    public GameObject ingredient_options;
 
     public bool is_refrigerator_open;
 
@@ -44,9 +45,18 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
         }
     }
 
+    void process_ingredient_options() {
+        if (is_refrigerator_open) {
+            ingredient_options.SetActive(true);
+        }
+        else {
+            ingredient_options.SetActive(false);
+        }
+    }
+
 
     void Update() {
         process_input();
+        process_ingredient_options();
     }
-
 }
