@@ -8,10 +8,10 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
     public GameObject ingredient_options;
 
     
-    public bool is_refrigerator_open;
+    bool is_refrigerator_open;
 
     
-    public bool is_inside_interaction_zone;
+    bool is_inside_interaction_zone;
     public Hand player_hand;
 
     
