@@ -23,6 +23,7 @@ public class Hand : MonoBehaviour {
     }
 
     public void release_ingredient() {
+        Destroy(held_ingredient);
         held_ingredient = null;
     }
 
