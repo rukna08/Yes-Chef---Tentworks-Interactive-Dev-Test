@@ -8,6 +8,7 @@ TagManager:
   - Meat
   - Cheese
   - CutVegetable
+  - CookedMeat
   layers:
   - Default
   - TransparentFX

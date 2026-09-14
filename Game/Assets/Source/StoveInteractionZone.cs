@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class StoveInteractionZone : MonoBehaviour {
 
     public GameObject meat_1;
     public GameObject meat_2;
+
+    public GameObject cooked_meat_1;
+    public GameObject cooked_meat_2;
 
     void OnTriggerEnter(Collider other) {
         is_inside_interaction_zone = true;
@@ -28,14 +32,10 @@ public class StoveInteractionZone : MonoBehaviour {
                     
                 if (player_hand.held_ingredient != null && player_hand.held_ingredient.tag == "Meat") {
                 
-                    if(player_hand.held_ingredient != null && !meat_1.activeSelf) {
-                        meat_1.SetActive(true);
-                        player_hand.release_ingredient();
-                    }
-
-                    if(player_hand.held_ingredient != null && !meat_2.activeSelf) {
-                        meat_2.SetActive(true);  
-                        player_hand.release_ingredient();
+                    if(player_hand.held_ingredient != null && !meat_1.activeSelf && !cooked_meat_1.activeSelf) {
+                        StartCoroutine(cook_meat_1());
+                    } else if(player_hand.held_ingredient != null && !meat_2.activeSelf && !cooked_meat_2.activeSelf) {
+                        StartCoroutine(cook_meat_2());
                     }
                 
                 }
@@ -46,5 +46,29 @@ public class StoveInteractionZone : MonoBehaviour {
         } else {
             cook_meat_text.gameObject.SetActive(false);        
         }
+    }
+
+    IEnumerator cook_meat_1() {
+        meat_1.SetActive(true);
+        player_hand.release_ingredient();
+
+        // Cook for 6 seconds.
+        yield return new WaitForSeconds(6f);
+
+        // deactivate meat_1 and activate cooked_meat_1
+        meat_1.SetActive(false);
+        cooked_meat_1.SetActive(true);
+    }
+
+    IEnumerator cook_meat_2() {
+        meat_2.SetActive(true);
+        player_hand.release_ingredient();
+
+        // Cook for 6 seconds.
+        yield return new WaitForSeconds(6f);
+
+        // deactivate meat_1 and activate cooked_meat_1
+        meat_2.SetActive(false);
+        cooked_meat_2.SetActive(true);
     }
 }
