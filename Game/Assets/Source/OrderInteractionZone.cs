@@ -17,9 +17,9 @@ public class OrderInteractionZone : MonoBehaviour {
     public GameObject vegetable_2;
     public GameObject vegetable_3;
 
-    // ########################################################################################################
-    public GameObject meat; // SUPER IMPORTANT NOTE: right now placing raw meat. switch to cooked meat later...
-    // ########################################################################################################
+    public GameObject cooked_meat_1;
+    public GameObject cooked_meat_2;
+    public GameObject cooked_meat_3;
 
     public GameObject cheese_1;
     public GameObject cheese_2;
@@ -140,6 +140,44 @@ public class OrderInteractionZone : MonoBehaviour {
 
 
                 // Cooked Meat Placement
+                if (!is_ingredient_1_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_1 == "Meat" && player_hand.held_ingredient.tag == "CookedMeat") {
+                            player_hand.release_ingredient();
+                            cooked_meat_1.SetActive(true);
+
+                            is_ingredient_1_satisfied = true;
+
+                            
+                        }
+                    }
+                }
+
+                if (!is_ingredient_2_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_2 == "Meat" && player_hand.held_ingredient.tag == "CookedMeat") {
+                            player_hand.release_ingredient();
+                            cooked_meat_2.SetActive(true);
+
+                            is_ingredient_2_satisfied = true;
+
+                            
+                        }
+                    }
+                }
+
+                if (!is_ingredient_3_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_3 == "Meat" && player_hand.held_ingredient.tag == "CookedMeat") {
+                            player_hand.release_ingredient();
+                            cooked_meat_3.SetActive(true);
+
+                            is_ingredient_3_satisfied = true;
+
+                            
+                        }
+                    }
+                }
             }
             
         } else {
