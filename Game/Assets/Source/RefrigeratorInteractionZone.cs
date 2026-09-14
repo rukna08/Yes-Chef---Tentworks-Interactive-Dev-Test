@@ -9,12 +9,18 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
 
     public bool is_refrigerator_open;
 
+    public bool is_inside_interaction_zone;
+
     void Start() {
         is_refrigerator_open = false;
+
+        is_inside_interaction_zone = false;
     }
     
     private void OnTriggerEnter(Collider other) {
         interact_open_text.gameObject.SetActive(true);
+
+        is_inside_interaction_zone = true;
     }
 
     private void OnTriggerExit(Collider other) {
@@ -22,6 +28,8 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
         interact_close_text.gameObject.SetActive(false);
 
         is_refrigerator_open = false;
+        
+        is_inside_interaction_zone = false;
     }
 
     void process_fridge_state() {
@@ -52,7 +60,9 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
     }
 
     void Update() {
-        process_input();
-        process_ingredient_options();
+        if (is_inside_interaction_zone) {
+            process_input();
+            process_ingredient_options();
+        }
     }
 }
