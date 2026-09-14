@@ -13,8 +13,11 @@ public class TableInteractionZone : MonoBehaviour {
     public GameObject vegetable;
     public GameObject cut_vegetable;
 
+    bool is_chopping_done;
+
     void Start() {
         is_inside_interaction_zone = false;
+        is_chopping_done = false;
     }
 
     void OnTriggerEnter(Collider other) {
@@ -39,6 +42,8 @@ public class TableInteractionZone : MonoBehaviour {
 
         vegetable.SetActive(false);
         cut_vegetable.SetActive(true);
+
+        is_chopping_done = true;
     }
 
     void Update() {
@@ -47,10 +52,16 @@ public class TableInteractionZone : MonoBehaviour {
             chop_vegetable_text.gameObject.SetActive(true);
 
 
-            if (Input.GetKeyDown(KeyCode.E)) {
+            if (!is_chopping_done && Input.GetKeyDown(KeyCode.E)) {
                 if (player_hand.held_ingredient != null && player_hand.held_ingredient.tag == "Vegetable") {
                     StartCoroutine(chop_vegetable());
                 }
+            }
+
+            if (is_chopping_done && Input.GetKeyDown(KeyCode.E)) {
+                player_hand.hold_ingredient(cut_vegetable);
+                cut_vegetable.SetActive(false);
+                is_chopping_done = false;
             }
             
         } else {

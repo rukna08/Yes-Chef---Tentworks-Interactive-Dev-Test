@@ -3272,6 +3272,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_TagString
+      value: CutVegetable
+      objectReference: {fileID: 0}
     - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05
