@@ -21,7 +21,9 @@ public class OrderInteractionZone : MonoBehaviour {
     public GameObject meat; // SUPER IMPORTANT NOTE: right now placing raw meat. switch to cooked meat later...
     // ########################################################################################################
 
-    public GameObject cheese;
+    public GameObject cheese_1;
+    public GameObject cheese_2;
+    public GameObject cheese_3;
 
     public TMP_Text random_order_text;
 
@@ -55,6 +57,8 @@ public class OrderInteractionZone : MonoBehaviour {
             random_order_text.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E)) {
+
+                // Cut Vegetable Placement
                 if (!is_ingredient_1_satisfied) {
                     if (player_hand.held_ingredient != null) {
                         if (ingredient_1 == "Vegetable" && player_hand.held_ingredient.tag == "CutVegetable") {
@@ -62,6 +66,8 @@ public class OrderInteractionZone : MonoBehaviour {
                             vegetable_1.SetActive(true);
 
                             is_ingredient_1_satisfied = true;
+
+                            
                         }
                     }
                 }
@@ -73,6 +79,8 @@ public class OrderInteractionZone : MonoBehaviour {
                             vegetable_2.SetActive(true);
 
                             is_ingredient_2_satisfied = true;
+
+                            
                         }
                     }
                 }
@@ -84,9 +92,54 @@ public class OrderInteractionZone : MonoBehaviour {
                             vegetable_3.SetActive(true);
 
                             is_ingredient_3_satisfied = true;
+
+                            
                         }
                     }
                 }
+
+                // Cheese Placement
+                if (!is_ingredient_1_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_1 == "Cheese" && player_hand.held_ingredient.tag == "Cheese") {
+                            player_hand.release_ingredient();
+                            cheese_1.SetActive(true);
+
+                            is_ingredient_1_satisfied = true;
+
+                            
+                        }
+                    }
+                }
+
+                if (!is_ingredient_2_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_2 == "Cheese" && player_hand.held_ingredient.tag == "Cheese") {
+                            player_hand.release_ingredient();
+                            cheese_2.SetActive(true);
+
+                            is_ingredient_2_satisfied = true;
+
+                            
+                        }
+                    }
+                }
+
+                if (!is_ingredient_3_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_3 == "Cheese" && player_hand.held_ingredient.tag == "Cheese") {
+                            player_hand.release_ingredient();
+                            cheese_3.SetActive(true);
+
+                            is_ingredient_3_satisfied = true;
+
+                            
+                        }
+                    }
+                }
+
+
+                // Cooked Meat Placement
             }
             
         } else {
