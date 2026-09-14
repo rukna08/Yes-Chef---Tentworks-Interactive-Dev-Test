@@ -27,6 +27,8 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
         interact_open_text.gameObject.SetActive(false);
         interact_close_text.gameObject.SetActive(false);
 
+        ingredient_options.SetActive(false);
+
         is_refrigerator_open = false;
         
         is_inside_interaction_zone = false;
