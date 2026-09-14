@@ -9,7 +9,20 @@ public class OrderInteractionZone : MonoBehaviour {
     public string ingredient_2;
     public string ingredient_3;
 
+    bool is_ingredient_1_satisfied;
+    bool is_ingredient_2_satisfied;
+    bool is_ingredient_3_satisfied;
+
+    public GameObject vegetable;
+    // ########################################################################################################
+    public GameObject meat; // SUPER IMPORTANT NOTE: right now placing raw meat. switch to cooked meat later...
+    // ########################################################################################################
+
+    public GameObject cheese;
+
     public TMP_Text random_order_text;
+
+    public Hand player_hand;
 
     void OnTriggerEnter(Collider other) {
         is_inside_interaction_zone = true;
@@ -24,6 +37,10 @@ public class OrderInteractionZone : MonoBehaviour {
         ingredient_2 = "";
         ingredient_3 = "";
 
+        is_ingredient_1_satisfied = false;
+        is_ingredient_2_satisfied = false;
+        is_ingredient_3_satisfied = false;
+
         is_inside_interaction_zone = false;
 
         generate_order();
@@ -34,6 +51,21 @@ public class OrderInteractionZone : MonoBehaviour {
 
         if (is_inside_interaction_zone) {
             random_order_text.gameObject.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E)) {
+                if (!is_ingredient_1_satisfied)
+                {
+                    if (player_hand.held_ingredient != null)
+                    {
+                        if (ingredient_1 == "Vegetable" && player_hand.held_ingredient.tag == "CutVegetable")
+                        {
+                            player_hand.release_ingredient();
+                            vegetable.SetActive(true);
+                        }
+                    }
+                }
+            }
+            
         }
         else {
             random_order_text.gameObject.SetActive(false);
