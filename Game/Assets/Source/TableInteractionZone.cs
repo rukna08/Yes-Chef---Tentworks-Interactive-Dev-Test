@@ -9,6 +9,8 @@ public class TableInteractionZone : MonoBehaviour {
 
     public Hand player_hand;
 
+    public GameObject vegetable;
+
     void Start() {
         is_inside_interaction_zone = false;
     }
@@ -31,6 +33,7 @@ public class TableInteractionZone : MonoBehaviour {
                 if (player_hand.held_ingredient != null && player_hand.held_ingredient.tag == "Vegetable") {
                     Debug.Log("Chopping Vegetable");
                     player_hand.release_ingredient();
+                    vegetable.SetActive(true);
                 }
             }
             
