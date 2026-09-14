@@ -10,12 +10,16 @@ public class Hand : MonoBehaviour {
     }
 
     public void hold_ingredient(GameObject ingredient) {
+
+        if (ingredient != null) {
+            Destroy(held_ingredient);
+        }
+
         held_ingredient = ingredient;
 
-        
-        ingredient = Instantiate(ingredient, transform.position, Quaternion.identity, transform);
+        held_ingredient = Instantiate(ingredient, transform.position, Quaternion.identity, transform);
 
-        ingredient.transform.localScale = new Vector3(2f, 0.5f, 2f);
+        held_ingredient.transform.localScale = new Vector3(2f, 0.5f, 2f);
     }
 
     public void release_ingredient() {
