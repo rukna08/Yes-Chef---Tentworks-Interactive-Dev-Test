@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class OrderInteractionZone : MonoBehaviour {
@@ -8,6 +9,8 @@ public class OrderInteractionZone : MonoBehaviour {
     public string ingredient_2;
     public string ingredient_3;
 
+    public TMP_Text random_order_text;
+
     void OnTriggerEnter(Collider other) {
         is_inside_interaction_zone = true;
     }
@@ -17,6 +20,10 @@ public class OrderInteractionZone : MonoBehaviour {
     }
 
     void Start() {
+        ingredient_1 = "";
+        ingredient_2 = "";
+        ingredient_3 = "";
+
         is_inside_interaction_zone = false;
 
         generate_order();
@@ -25,7 +32,14 @@ public class OrderInteractionZone : MonoBehaviour {
 
     void Update() {
 
+        if (is_inside_interaction_zone) {
+            random_order_text.gameObject.SetActive(true);
+        }
+        else {
+            random_order_text.gameObject.SetActive(false);
+        }
 
+        random_order_text.text = ingredient_1 + "|" + ingredient_2 + "|" + ingredient_3;
 
     }
 
