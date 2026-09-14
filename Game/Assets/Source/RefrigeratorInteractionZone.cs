@@ -11,6 +11,10 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
 
     public bool is_inside_interaction_zone;
 
+    public Hand player_hand;
+
+    public GameObject[] ingredients;
+
     void Start() {
         is_refrigerator_open = false;
 
@@ -55,8 +59,22 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
     void process_ingredient_options() {
         if (is_refrigerator_open) {
             ingredient_options.SetActive(true);
-        }
-        else {
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Debug.Log("Player picked up meat");
+                player_hand.hold_ingredient(ingredients[0]);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                player_hand.hold_ingredient(ingredients[1]);
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+                player_hand.hold_ingredient(ingredients[2]);
+            }
+
+            
+        } else {
             ingredient_options.SetActive(false);
         }
     }
