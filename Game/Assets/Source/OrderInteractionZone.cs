@@ -29,6 +29,9 @@ public class OrderInteractionZone : MonoBehaviour {
 
     public Hand player_hand;
 
+    public TMP_Text elapsed_seconds_text;
+    float elapsed_time;
+
     void OnTriggerEnter(Collider other) {
         is_inside_interaction_zone = true;
     }
@@ -38,6 +41,8 @@ public class OrderInteractionZone : MonoBehaviour {
     }
 
     void Start() {
+        elapsed_time = 0f;
+
         ingredient_1 = "";
         ingredient_2 = "";
         ingredient_3 = "";
@@ -53,6 +58,12 @@ public class OrderInteractionZone : MonoBehaviour {
 
 
     void Update() {
+
+        elapsed_time += Time.deltaTime;
+        int seconds = Mathf.FloorToInt(elapsed_time);
+        elapsed_seconds_text.text = seconds.ToString() + "s";
+
+
         if (is_inside_interaction_zone) {
             random_order_text.gameObject.SetActive(true);
 
