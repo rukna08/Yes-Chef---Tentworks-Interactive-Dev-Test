@@ -40,6 +40,12 @@ public class StoveInteractionZone : MonoBehaviour {
                 
                 }
 
+                if (player_hand.held_ingredient == null && cooked_meat_1.activeSelf && !meat_1.activeSelf) {
+                    Debug.Log("Picked cooked meat 1");
+                } else if (player_hand.held_ingredient == null && cooked_meat_2.activeSelf && !meat_2.activeSelf) {
+                    Debug.Log("Picked cooked meat 2");
+                }
+
             }
 
 
