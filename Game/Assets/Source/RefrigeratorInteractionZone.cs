@@ -14,19 +14,16 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
     }
     
     private void OnTriggerEnter(Collider other) {
-        Debug.Log("Player Entered");
-
         interact_open_text.gameObject.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other) {
-        Debug.Log("Player Exited!");
-
         interact_open_text.gameObject.SetActive(false);
         interact_close_text.gameObject.SetActive(false);
 
         is_refrigerator_open = false;
     }
+
     void process_fridge_state() {
         if (is_refrigerator_open) {
             interact_open_text.gameObject.SetActive(false);
@@ -53,7 +50,6 @@ public class RefrigeratorInteractionZone : MonoBehaviour {
             ingredient_options.SetActive(false);
         }
     }
-
 
     void Update() {
         process_input();
