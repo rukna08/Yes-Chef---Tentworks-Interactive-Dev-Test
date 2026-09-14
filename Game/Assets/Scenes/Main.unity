@@ -760,6 +760,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495445095}
   m_CullTransparentMesh: 1
+--- !u!1001 &525848919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1636611163}
+    m_Modifications:
+    - target: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_Name
+      value: Cut Vegetable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10000229
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.16300678
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+--- !u!4 &525848920 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+  m_PrefabInstance: {fileID: 525848919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &525848921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+  m_PrefabInstance: {fileID: 525848919}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &572279598
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,6 +2553,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495673803}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1527742627
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1636611163}
+    m_Modifications:
+    - target: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_Name
+      value: Cut Vegetable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10000229
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.16300678
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+--- !u!4 &1527742628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4377153345426803150, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+  m_PrefabInstance: {fileID: 1527742627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1527742629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4114583871205146489, guid: 648df03d48d7bf74f8295619b91ca2c3, type: 3}
+  m_PrefabInstance: {fileID: 1527742627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1585313260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,6 +2777,8 @@ Transform:
   - {fileID: 1819567788}
   - {fileID: 1228504507}
   - {fileID: 2021469793}
+  - {fileID: 1527742628}
+  - {fileID: 525848920}
   m_Father: {fileID: 1315145181}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1636611164
@@ -3232,7 +3400,9 @@ MonoBehaviour:
   ingredient_1: 
   ingredient_2: 
   ingredient_3: 
-  vegetable: {fileID: 2021469794}
+  vegetable_1: {fileID: 2021469794}
+  vegetable_2: {fileID: 1527742629}
+  vegetable_3: {fileID: 525848921}
   meat: {fileID: 4755527859551372469, guid: 32efa61185d97a94a8394cab7776041e, type: 3}
   cheese: {fileID: 6047242810127217030, guid: d4cfc21799da8b145a04c5b506e9c92a, type: 3}
   random_order_text: {fileID: 298033767}

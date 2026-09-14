@@ -13,7 +13,10 @@ public class OrderInteractionZone : MonoBehaviour {
     bool is_ingredient_2_satisfied;
     bool is_ingredient_3_satisfied;
 
-    public GameObject vegetable;
+    public GameObject vegetable_1;
+    public GameObject vegetable_2;
+    public GameObject vegetable_3;
+
     // ########################################################################################################
     public GameObject meat; // SUPER IMPORTANT NOTE: right now placing raw meat. switch to cooked meat later...
     // ########################################################################################################
@@ -48,31 +51,49 @@ public class OrderInteractionZone : MonoBehaviour {
 
 
     void Update() {
-
         if (is_inside_interaction_zone) {
             random_order_text.gameObject.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E)) {
-                if (!is_ingredient_1_satisfied)
-                {
-                    if (player_hand.held_ingredient != null)
-                    {
-                        if (ingredient_1 == "Vegetable" && player_hand.held_ingredient.tag == "CutVegetable")
-                        {
+                if (!is_ingredient_1_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_1 == "Vegetable" && player_hand.held_ingredient.tag == "CutVegetable") {
                             player_hand.release_ingredient();
-                            vegetable.SetActive(true);
+                            vegetable_1.SetActive(true);
+
+                            is_ingredient_1_satisfied = true;
+                        }
+                    }
+                }
+
+                if (!is_ingredient_2_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_2 == "Vegetable" && player_hand.held_ingredient.tag == "CutVegetable") {
+                            player_hand.release_ingredient();
+                            vegetable_2.SetActive(true);
+
+                            is_ingredient_2_satisfied = true;
+                        }
+                    }
+                }
+
+                if (!is_ingredient_3_satisfied) {
+                    if (player_hand.held_ingredient != null) {
+                        if (ingredient_3 == "Vegetable" && player_hand.held_ingredient.tag == "CutVegetable") {
+                            player_hand.release_ingredient();
+                            vegetable_3.SetActive(true);
+
+                            is_ingredient_3_satisfied = true;
                         }
                     }
                 }
             }
             
-        }
-        else {
+        } else {
             random_order_text.gameObject.SetActive(false);
         }
 
         random_order_text.text = ingredient_1 + "|" + ingredient_2 + "|" + ingredient_3;
-
     }
 
 
