@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
     void Start() {
         main_score = 0;
         high_score = PlayerPrefs.GetInt("HighScore", 0);
-        game_runtime = 40f;
+        game_runtime = 180f;
         game_over_screen.SetActive(false);
         is_game_over = false;
     }
