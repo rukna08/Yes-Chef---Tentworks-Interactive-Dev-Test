@@ -29,7 +29,7 @@ public class TableInteractionZone : MonoBehaviour {
     }
 
     IEnumerator chop_vegetable() {
-        Debug.Log("Chopping Vegetable");
+        
 
         player_hand.release_ingredient();
         vegetable.SetActive(true);

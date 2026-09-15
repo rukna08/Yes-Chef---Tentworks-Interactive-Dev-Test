@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -199,6 +200,7 @@ public class OrderInteractionZone : MonoBehaviour {
             random_order_text.gameObject.SetActive(false);
         }
 
+        // elapsed time on top of the order window.
         random_order_text.text = ingredient_1 + "|" + ingredient_2 + "|" + ingredient_3;
 
 
@@ -206,13 +208,50 @@ public class OrderInteractionZone : MonoBehaviour {
 
 
         if(is_order_satisfied) {
-            Debug.Log("Order Satisfied!");    
+
+            is_order_satisfied = false;
+
+            // update score
+
+            StartCoroutine(process_completed_order());
         }
+    }
+
+    IEnumerator process_completed_order() {
+
+        // update score here later
+
+        is_ingredient_1_satisfied = false;
+        is_ingredient_2_satisfied = false;
+        is_ingredient_3_satisfied = false;
+
+        vegetable_1.SetActive(false);
+        vegetable_2.SetActive(false);
+        vegetable_3.SetActive(false);
+
+        cheese_1.SetActive(false);
+        cheese_2.SetActive(false);
+        cheese_3.SetActive(false);
+
+        cooked_meat_1.SetActive(false);
+        cooked_meat_2.SetActive(false);
+        cooked_meat_3.SetActive(false);
+
+        ingredient_1 = "";
+        ingredient_2 = "";
+        ingredient_3 = "";
+
+        yield return new WaitForSeconds(5f);
+
+
+        generate_order();
+
+        Debug.Log("New order arrived!");
         
     }
 
     void process_order_satisfaction() {
-        // check for order satisfaction
+        // check for order satisfaction.
         if(is_ingredient_1_satisfied && is_ingredient_2_satisfied && (ingredient_3 == "" || is_ingredient_3_satisfied)) {
             is_order_satisfied = true;
         }
