@@ -5593,6 +5593,7 @@ MonoBehaviour:
   random_order_text: {fileID: 298033767}
   player_hand: {fileID: 454432277}
   elapsed_seconds_text: {fileID: 186000139}
+  game_manager: {fileID: 2099503242}
 --- !u!1 &1838272930
 GameObject:
   m_ObjectHideFlags: 0

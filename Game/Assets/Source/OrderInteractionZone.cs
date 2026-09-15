@@ -35,6 +35,8 @@ public class OrderInteractionZone : MonoBehaviour {
 
     bool is_order_satisfied;
 
+    public GameManager game_manager;
+
     void OnTriggerEnter(Collider other) {
         is_inside_interaction_zone = true;
     }
@@ -245,7 +247,8 @@ public class OrderInteractionZone : MonoBehaviour {
 
         score -= (int)elapsed_time;
 
-
+        // add score to game_manager's main_score which gets set to the score_ui.
+        game_manager.main_score += score;
     }
 
     IEnumerator process_completed_order() {
