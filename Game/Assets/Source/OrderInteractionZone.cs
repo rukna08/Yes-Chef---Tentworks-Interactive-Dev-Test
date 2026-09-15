@@ -66,10 +66,11 @@ public class OrderInteractionZone : MonoBehaviour {
 
         if (ingredient_1 != "") {
             elapsed_time += Time.deltaTime;
+            int seconds = Mathf.FloorToInt(elapsed_time);
+            elapsed_seconds_text.text = seconds.ToString() + "s";
+        } else {
+            elapsed_seconds_text.text = "AWAITING NEW ORDER";
         }
-
-        int seconds = Mathf.FloorToInt(elapsed_time);
-        elapsed_seconds_text.text = seconds.ToString() + "s";
 
 
         if (is_inside_interaction_zone) {
