@@ -15,6 +15,8 @@ public class TableInteractionZone : MonoBehaviour {
 
     bool is_chopping_done;
 
+    public Player player;
+
     void Start() {
         is_inside_interaction_zone = false;
         is_chopping_done = false;
@@ -36,7 +38,11 @@ public class TableInteractionZone : MonoBehaviour {
 
         // Wait 2 secs for chopping.
 
+        player.can_move = false;
+
         yield return new WaitForSeconds(2f);
+
+        player.can_move = true;
 
         // cut vegetable object sec active true
 

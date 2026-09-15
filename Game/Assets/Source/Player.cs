@@ -4,15 +4,24 @@ public class Player : MonoBehaviour {
 
     public float speed;
 
+    public bool can_move;
+
     void Start() {
 
-        speed = 5f;
+        can_move = true;
 
+        speed = 5f;
+    
     }
 
     void Update() {
 
-        move();
+        if (can_move) {
+
+            move();
+        
+        }
+
 
     }
 

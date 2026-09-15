@@ -5834,6 +5834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 0
+  can_move: 0
 --- !u!54 &1842624627
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6237,6 +6238,7 @@ MonoBehaviour:
   player_hand: {fileID: 454432277}
   vegetable: {fileID: 1145371845}
   cut_vegetable: {fileID: 1119480468}
+  player: {fileID: 1842624626}
 --- !u!1001 &2021469792
 PrefabInstance:
   m_ObjectHideFlags: 0
