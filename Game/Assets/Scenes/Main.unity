@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 384939661}
   - component: {fileID: 384939660}
   m_Layer: 5
-  m_Name: Random Order Text
+  m_Name: Score UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6411,6 +6411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2099503241}
+  - component: {fileID: 2099503242}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -6434,6 +6435,20 @@ Transform:
   - {fileID: 1439215177}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2099503242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099503240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14eba2bd9c557d64ea27fa0c61d501d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  main_score: 0
+  score_ui: {fileID: 384939660}
 --- !u!1 &2115860501
 GameObject:
   m_ObjectHideFlags: 0
