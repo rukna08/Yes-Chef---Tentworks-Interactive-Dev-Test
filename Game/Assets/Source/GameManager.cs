@@ -66,4 +66,9 @@ public class GameManager : MonoBehaviour {
     public void exit_game() {
         Application.Quit();
     }
+
+    public void reset_high_score() {
+        PlayerPrefs.DeleteKey("HighScore");
+        PlayerPrefs.Save();
+    }
 }
