@@ -8,13 +8,15 @@ public class GameManager : MonoBehaviour {
     public int high_score;
     public TMP_Text score_ui;
     public TMP_Text time_left_ui;
+    public TMP_Text high_score_ui;
     float game_runtime;
     public GameObject game_over_screen;
     bool is_game_over;
 
     void Start() {
         main_score = 0;
-        game_runtime = 5f;
+        high_score = PlayerPrefs.GetInt("HighScore", 0);
+        game_runtime = 40f;
         game_over_screen.SetActive(false);
         is_game_over = false;
     }
@@ -37,6 +39,14 @@ public class GameManager : MonoBehaviour {
         game_runtime -= Time.deltaTime;
         time_left_ui.text = "TIME LEFT: " + ((int)game_runtime).ToString();
         if(game_runtime <= 0f) {
+            if(main_score > PlayerPrefs.GetInt("HighScore", 0)) {
+                PlayerPrefs.SetInt("HighScore", main_score);
+                PlayerPrefs.Save();
+                high_score = main_score;
+            }
+
+            high_score_ui.text = "HIGH SCORE: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+
             game_over_screen.SetActive(true);
             is_game_over = true;
         }
