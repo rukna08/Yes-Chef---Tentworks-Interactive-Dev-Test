@@ -221,9 +221,40 @@ public class OrderInteractionZone : MonoBehaviour {
         }
     }
 
+    void update_score() {
+
+        int score = 0;
+
+        switch(ingredient_1) {
+            case "Meat":        score += 30; break;
+            case "Vegetable":   score += 20; break;
+            case "Cheese":      score += 10; break;
+        }
+
+        switch(ingredient_2) {
+            case "Meat":        score += 30; break;
+            case "Vegetable":   score += 20; break;
+            case "Cheese":      score += 10; break;
+        }
+
+        switch(ingredient_3) {
+            case "Meat":        score += 30; break;
+            case "Vegetable":   score += 20; break;
+            case "Cheese":      score += 10; break;    
+        }
+
+        score -= (int)elapsed_time;
+
+
+    }
+
     IEnumerator process_completed_order() {
 
         // update score here later
+
+        update_score();
+
+        //
 
         is_ingredient_1_satisfied = false;
         is_ingredient_2_satisfied = false;
