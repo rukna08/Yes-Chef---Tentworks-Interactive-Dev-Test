@@ -64,7 +64,10 @@ public class OrderInteractionZone : MonoBehaviour {
 
     void Update() {
 
-        elapsed_time += Time.deltaTime;
+        if (ingredient_1 != "") {
+            elapsed_time += Time.deltaTime;
+        }
+
         int seconds = Mathf.FloorToInt(elapsed_time);
         elapsed_seconds_text.text = seconds.ToString() + "s";
 
@@ -240,6 +243,8 @@ public class OrderInteractionZone : MonoBehaviour {
         ingredient_1 = "";
         ingredient_2 = "";
         ingredient_3 = "";
+
+        elapsed_time = 0f;
 
         yield return new WaitForSeconds(5f);
 
