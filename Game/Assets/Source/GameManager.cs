@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     float game_runtime;
     public GameObject game_over_screen;
     bool is_game_over;
+    public TMP_Text pause_resume_button_text;
 
     void Start() {
         main_score = 0;
@@ -70,5 +71,15 @@ public class GameManager : MonoBehaviour {
     public void reset_high_score() {
         PlayerPrefs.DeleteKey("HighScore");
         PlayerPrefs.Save();
+    }
+
+    public void toggle_pause() {
+        if(Time.timeScale == 1f) {
+            Time.timeScale = 0f;
+            pause_resume_button_text.text = "RESUME";
+        } else {
+            Time.timeScale = 1f;
+            pause_resume_button_text.text = "PAUSE";
+        }
     }
 }

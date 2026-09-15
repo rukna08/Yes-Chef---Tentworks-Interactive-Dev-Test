@@ -1,7 +1,7 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/respin/6000.4.12f1-6df48370b9ce' branch; Version is '6000.4.12f1 (3ca267ce8005) revision 3973735'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Ankur" at "2026-09-15T19:05:36.1092444Z"
 OS: 'Windows 11  (10.0.26200) CoreSingleLanguage' Language: 'en' Physical Memory: 16236 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Ankur" at "2026-09-15T19:05:36.0897447Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
@@ -10,12 +10,12 @@ Date: 2026-09-15T19:05:36Z
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.3+d7ffd15
-  Session Id:              943e5a87136f4b3489b03197871a2a1c
+  Session Id:              cb93c689c0f64e3eb46c7a59b14a8935
   Correlation Id:          4196f409eab3ff2c69a1edc477dc6559
-  External correlation Id: 2258986805316580088
+  External correlation Id: 3342578061848214849
   Machine Id:              L9mjQsxicID467K8m0On9OfeoLw=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Ankur" (connect: 0.00s, validation: 0.00s, handshake: 0.06s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Ankur-notifications" at "2026-09-15T19:05:36.1497038Z"
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Ankur" (connect: 0.00s, validation: 0.01s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Ankur-notifications" at "2026-09-15T19:05:36.1659707Z"
 [Licensing::Module] Licensing Background thread has ended after 0.06s
 
 COMMAND LINE ARGUMENTS:
@@ -24,11 +24,11 @@ C:\Program Files\Unity\Hub\Editor\6000.4.12f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker2
 -projectPath
 C:/Users/Ankur/Desktop/Yes-Chef---Tentworks-Interactive-Dev-Test/Game
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker2.log
 -srvPort
 57961
 -licensingIpc
@@ -79,12 +79,12 @@ C:/Users/Ankur/Desktop/Yes-Chef---Tentworks-Interactive-Dev-Test/Game
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [5656]  Target information:
+Player connection [16968]  Target information:
 
-Player connection [5656]  * "[IP] 192.168.29.126 [Port] 0 [Flags] 2 [Guid] 4219871975 [EditorId] 4219871975 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-SO0UAKM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [16968]  * "[IP] 192.168.29.126 [Port] 0 [Flags] 2 [Guid] 93295548 [EditorId] 93295548 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-SO0UAKM) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [5656] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [5656] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [16968] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [16968] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -96,7 +96,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 5.28 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 4.60 ms, found 4 plugins.
 Initialize engine version: 6000.4.12f1 (3ca267ce8005)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.4.12f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Ankur/Desktop/Yes-Chef---Tentworks-Interactive-Dev-Test/Game/Assets
