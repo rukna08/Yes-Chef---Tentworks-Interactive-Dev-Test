@@ -32,6 +32,8 @@ public class OrderInteractionZone : MonoBehaviour {
     public TMP_Text elapsed_seconds_text;
     float elapsed_time;
 
+    bool is_order_satisfied;
+
     void OnTriggerEnter(Collider other) {
         is_inside_interaction_zone = true;
     }
@@ -52,6 +54,8 @@ public class OrderInteractionZone : MonoBehaviour {
         is_ingredient_3_satisfied = false;
 
         is_inside_interaction_zone = false;
+
+        is_order_satisfied = false;
 
         generate_order();
     }
@@ -196,8 +200,23 @@ public class OrderInteractionZone : MonoBehaviour {
         }
 
         random_order_text.text = ingredient_1 + "|" + ingredient_2 + "|" + ingredient_3;
+
+
+        process_order_satisfaction();
+
+
+        if(is_order_satisfied) {
+            Debug.Log("Order Satisfied!");    
+        }
+        
     }
 
+    void process_order_satisfaction() {
+        // check for order satisfaction
+        if(is_ingredient_1_satisfied && is_ingredient_2_satisfied && (ingredient_3 == "" || is_ingredient_3_satisfied)) {
+            is_order_satisfied = true;
+        }
+    }
 
     void generate_order() {
 
